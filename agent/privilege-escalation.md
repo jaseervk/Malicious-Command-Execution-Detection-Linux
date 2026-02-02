@@ -11,3 +11,9 @@ Add rule on /etc/audit/rules.d/privilege-escalation.rules
 -a always,exit -F path=/usr/bin/pkexec -F perm=x -k pkexec_exec
 ```
 
+Apply Rules:
+```bash
+augenrules --load
+systemctl restart auditd
+auditctl -l
+```
