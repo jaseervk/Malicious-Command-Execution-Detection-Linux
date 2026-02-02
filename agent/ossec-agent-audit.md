@@ -13,3 +13,8 @@ Add this rule:
   <location>/var/log/audit/audit.log</location>
 </localfile>
 ```
+
+Restart Agent:
+```bash
+systemctl restart wazuh-agent
+```
