@@ -1,5 +1,10 @@
 # Malicious Command Execution Detection
 
+Add rule on /etc/audit/rules.d/privilege-escalation.rules
+```bash
+nano  /etc/audit/rules.d/privilege-escalation.rules
+```
+
 ```bash
 -a always,exit -F path=/usr/bin/nc -F perm=x -k netcat_exec
 -a always,exit -F path=/usr/bin/nmap -F perm=x -k recon_exec
